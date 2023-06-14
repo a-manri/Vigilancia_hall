@@ -11,20 +11,13 @@ if __name__ == '__main__':
             print("{} connected!".format(esp.port))
             try:
                 while True:
-                    #cmd=input("Enter command (data,led0 or led1): ")
-                    #esp.write(cmd.encode())
-                    #time.sleep(0.1) #wait for esp to answer
-                    
                     while esp.inWaiting()==0: pass
-                    if  esp.inWaiting()>0: 
+                    if  esp.inWaiting()>0:
                         answer=str(esp.readline())
-                        print("---> {}".format(answer))
-                        #if cmd=="data":
-                        #    dataList=answer.split("x")
-                        #    print("led state : {}".format(dataList[0]))
-                        #    print("Analog input A0 : {}".format(dataList[1]))
-                        #    print("Analog input A1: {}".format(dataList[2]))
-                            
+                        #print("--->{}".format(answer))
+                        #dataList=answer.split("x")
+                        print("Analog input A0 : {}".format(answer))
+                        
                         esp.flushInput() #remove data after reading
                             
             except KeyboardInterrupt:
