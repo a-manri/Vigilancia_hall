@@ -12,13 +12,12 @@ if __name__ == '__main__':
             try:
                 while True:
                     while esp.inWaiting()==0: pass
-                    if  esp.inWaiting()>0:
-                        #answer=str(esp.readline())
-                        inputstr = esp.readline().decode("utf-8").strip()
+                    if  esp.inWaiting()>0: 
+                        inputstr = int(esp.readline().decode('utf-8').strip())
+                        inputstr = inputstr
+                        print("Analog input = " + str(inputstr))
                         #dataList=answer.split("x")
-                        print("Analog input A0: ".format(answer + inputstr)
-                        
-                        #esp.flushInput() #remove data after reading
-                            
+                        #print("led state : {}".format(dataList[0]))
+                        esp.flushInput() #remove data after reading
             except KeyboardInterrupt:
                 print("KeyboardInterrupt")
