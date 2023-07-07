@@ -6,4 +6,4 @@ Sistema de vigilancia para puertas con sensor hall de campo magnético
 
 - SerialESP.ino: corre en una Wemos D1 mini pro, que actúa como interface entre el sensor linear hall KY-024 y la raspberry pi, enviando los valores de la salida analógica del sensor via conexión serial con la raspberry
 
-- data_sensor.py: es una función auxiliar que lee los datos recividos en el puerto serial
+- data_sensor.py: función auxiliar que lee los datos recividos en el puerto serial
